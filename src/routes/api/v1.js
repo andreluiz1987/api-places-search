@@ -1,5 +1,6 @@
 const express = require('express');
 const placesController = require('../../controllers/places-controller');
+const freightController = require('../../controllers/freight-rate-controller');
 
 let router = express.Router();
 
@@ -10,5 +11,6 @@ router.get('/', (req, res, next) => {
 });
 
 router.use('/places', placesController);
+router.use('/freigths', freightController)
 
 module.exports = router;
